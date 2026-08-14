@@ -1,0 +1,1148 @@
+/* =========================================================
+   GABRIEL JUNIOR SAIDI KALOKOLA
+   SOFTWARE DEVELOPMENT PORTFOLIO
+   WDD 130 - FINAL RESPONSIVE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET & GLOBAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    min-height: 70vh;
+}
+
+
+/* =========================================================
+   2. HEADER & NAVIGATION
+   ========================================================= */
+
+header {
+    background-color: #000080;
+    color: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+
+/* =========================================================
+   3. HERO SECTION - HOME
+   ========================================================= */
+
+.hero {
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 60, 0.72),
+            rgba(0, 0, 80, 0.72)
+        ),
+        url("images/photo1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid white;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 30px;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   4. HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: #000080;
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    border: 2px solid #000080;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: #000080;
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    background-color: white;
+    color: #000080;
+    border-color: white;
+}
+
+.secondary-button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+
+/* =========================================================
+   5. GENERAL BUTTON
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #000080;
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000055;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   6. INTRO SECTION - HOME
+   ========================================================= */
+
+.intro-section {
+    background-color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.intro-content h2 {
+    color: #000080;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   7. SECTION DESCRIPTION
+   ========================================================= */
+
+.section-description {
+    max-width: 750px;
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   8. SKILLS SECTION
+   ========================================================= */
+
+.skills-section {
+    background-color: #f4f7fb;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills-section > h2 {
+    color: #000080;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   9. SKILL CARDS
+   ========================================================= */
+
+.skill-card {
+    background-color: white;
+
+    width: 260px;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.skill-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #000080;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skill-card h3 {
+    color: #000080;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. PROJECTS PREVIEW - HOME
+   ========================================================= */
+
+.projects-preview {
+    background-color: white;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.projects-preview > h2 {
+    color: #000080;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   11. CARDS
+   ========================================================= */
+
+.cards {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+
+    width: 320px;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #000080;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   12. PROJECT GALLERY
+   ========================================================= */
+
+.gallery {
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.gallery .card {
+    width: 100%;
+
+    padding: 0 0 25px;
+
+    overflow: hidden;
+}
+
+.gallery .card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    margin: 0 0 20px;
+
+    border: none;
+
+    border-radius: 12px 12px 0 0;
+
+    transition: transform 0.4s ease;
+}
+
+.gallery .card:hover img {
+    transform: scale(1.04);
+}
+
+.gallery .card h3,
+.gallery .card p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* =========================================================
+   13. ABOUT PAGE
+   ========================================================= */
+
+main > h2 {
+    text-align: center;
+
+    color: #000080;
+
+    font-size: 38px;
+
+    margin-top: 50px;
+}
+
+.about-container {
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border: 5px solid #000080;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 550px;
+
+    text-align: left;
+}
+
+.about-text h3 {
+    color: #000080;
+
+    font-size: 24px;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+}
+
+.about-text h3:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.about-text ul,
+.about-text ol {
+    margin-left: 25px;
+
+    margin-bottom: 20px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   14. CONTACT PAGE
+   ========================================================= */
+
+.contact-section {
+    max-width: 650px;
+
+    margin: 60px auto;
+
+    padding: 40px 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.contact-section h1 {
+    color: #000080;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.contact-email {
+    margin-bottom: 30px;
+
+    color: #555;
+
+    font-weight: bold;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #333;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #000080;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 128, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    align-self: center;
+
+    width: 140px;
+
+    padding: 13px 20px;
+
+    background-color: #000080;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #000055;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   15. CALL TO ACTION
+   ========================================================= */
+
+.cta-section {
+    background-color: #000080;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #05052d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    margin-top: 0;
+}
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   17. ANIMATIONS
+   ========================================================= */
+
+.hero-content,
+.intro-content,
+.skill-card,
+.card,
+.about-container,
+.contact-section {
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   18. TABLET RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   19. MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        position: static;
+
+        flex-direction: column;
+
+        padding: 20px 15px;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .hero-image img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-button {
+        width: 90%;
+
+        max-width: 300px;
+
+        text-align: center;
+    }
+
+
+    /* INTRO */
+
+    .intro-section {
+        padding: 60px 20px;
+    }
+
+    .intro-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-section {
+        padding: 60px 20px;
+    }
+
+    .skills-section > h2 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 90%;
+
+        max-width: 360px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-preview {
+        padding: 60px 20px;
+    }
+
+    .projects-preview > h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+
+        max-width: 380px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 0 20px;
+
+        margin-top: 35px;
+    }
+
+    .gallery .card {
+        width: 100%;
+    }
+
+    .gallery .card img {
+        height: auto;
+
+        max-height: 300px;
+    }
+
+
+    /* ABOUT */
+
+    main > h2 {
+        font-size: 30px;
+
+        margin-top: 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        margin-top: 35px;
+
+        gap: 30px;
+    }
+
+    .about-image {
+        flex: none;
+    }
+
+    .about-image img {
+        width: 250px;
+
+        height: 300px;
+    }
+
+    .about-text {
+        width: 100%;
+
+        max-width: 600px;
+
+        text-align: center;
+    }
+
+    .about-text h3 {
+        font-size: 22px;
+    }
+
+    .about-text ul,
+    .about-text ol {
+        display: inline-block;
+
+        text-align: left;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        width: 90%;
+
+        margin: 40px auto;
+
+        padding: 30px 20px;
+    }
+
+    .contact-section h1 {
+        font-size: 30px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   20. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero-image img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro-content h2,
+    .skills-section > h2,
+    .projects-preview > h2,
+    .cta-section h2 {
+        font-size: 27px;
+    }
+
+    .skill-card,
+    .card {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .contact-section {
+        width: 94%;
+
+        padding: 25px 15px;
+    }
+}
